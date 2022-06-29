@@ -10,9 +10,7 @@
                 <strong>Delicious Food Menu, </strong><br />in Your Gadget
               </h2>
               <p>Ayo segera pilih dan pesan makanan favorit Anda</p>
-              <a class="btn btn-lg btn-success" href="/foods">
-                Pesan
-              </a>
+               <nuxt-link to="/food" class="btn btn-success">Pesan</nuxt-link>
             </div>
           </div>
         </div>
@@ -35,9 +33,7 @@
                 <strong>Delicious Food Menu, </strong><br />in Your Gadget
               </h2>
               <p>Ayo segera pilih dan pesan makanan favorit Anda</p>
-              <a class="btn btn-lg btn-success" href="/foods">
-                Pesan
-              </a>
+               <nuxt-link to="/food" class="btn btn-lg btn-success">Pesan</nuxt-link>
             </div>
           </div>
         </div>

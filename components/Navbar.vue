@@ -9,21 +9,22 @@
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
             <li class="nav-item">
-              <a class="nav-link" href="/">Home</a>
+              <nuxt-link to="/" class="nav-link">Home</nuxt-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/foods">Foods</a>
+              <nuxt-link to="/food" class="nav-link">Foods</nuxt-link>
             </li>
           </b-navbar-nav>
 
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="/keranjang">
-                Keranjang 
-                <!-- <b-icon-bag /> -->
-                <span class="badge badge-success ml-2">0</span>
-              </a>
+              <nuxt-link to="/keranjang" class="nav-link"
+                >Keranjang
+                <span class="badge badge-success ml-2">{{
+                  jumlah_pemesanan.length
+                }}</span>
+              </nuxt-link>
             </li>
           </b-navbar-nav>
         </b-collapse>
@@ -35,6 +36,30 @@
 <script>
 export default {
   name: 'NavbarComponent',
+  data() {
+    return {
+      jumlah_pemesanan: [],
+    }
+  },
+  mounted() {
+    // Make a request using GET
+    this.$axios
+      .get('keranjangs')
+      .then((response) => {
+        // handle success
+        console.log('Berhasil jumlah product di keranjang : ', response)
+        this.setJumlah(response.data)
+      })
+      .catch((error) => {
+        // handle error
+        console.log('Gagal jumlah product di keranjang : ', error)
+      })
+  },
+  methods: {
+    setJumlah(data) {
+      this.jumlah_pemesanan = data
+    },
+  },
 }
 </script>
 

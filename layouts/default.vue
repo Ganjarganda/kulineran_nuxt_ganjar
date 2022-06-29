@@ -1,17 +1,16 @@
 <template>
-<div>
+  <div>
     <Navbar />
     <Nuxt />
     <Footer />
-</div>
+  </div>
 </template>
 
 <script>
 export default {
-    name : 'DefaultLayout',
+  name: 'DefaultLayout',
 }
 </script>
 
 <style>
-
 </style>

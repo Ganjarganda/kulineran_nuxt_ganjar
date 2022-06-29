@@ -15,13 +15,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '@/assets/css/main.css',
-  ],
+  css: ['@/assets/css/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -54,7 +51,7 @@ export default {
   },
 
   toast: {
-    position: "top-right",
+    position: 'top-right',
     timeout: 1996,
     closeOnClick: true,
     pauseOnFocusLoss: true,
@@ -65,9 +62,10 @@ export default {
     hideProgressBar: true,
     closeButton: false,
     icon: true,
-    rtl: false
-},
+    rtl: false,
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
 }
